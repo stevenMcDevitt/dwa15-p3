@@ -11,7 +11,21 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
+Route::get('/', function() {
+	
+    return View::make('index');
+
 });
+
+Route::get('/loremipsum', function() {
+	
+    return View::make('loremipsum');
+
+});
+
+Route::get('/randomuser', function() {
+	
+    return View::make('randomuser');
+
+});
+

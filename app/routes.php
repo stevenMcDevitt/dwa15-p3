@@ -23,9 +23,21 @@ Route::get('/loremipsum', function() {
 
 });
 
+Route::post('/loremipsum', function() {
+	
+    return View::make('loremipsum-results');
+
+});
+
 Route::get('/randomuser', function() {
 	
     return View::make('randomuser');
+
+});
+
+Route::post('/randomuser', function() {
+	
+    return View::make('randomuser-results');
 
 });
 

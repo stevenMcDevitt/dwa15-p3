@@ -19,9 +19,9 @@
     {{ Form::open() }}
 
         <div class="form-group">
-            {{ Form::label('Number of Paragraphs:') }}
-            {{ Form::number('paragraphCount') }}
-            {{ Form::submit('Generate Text') }}
+            {{ Form::label('Number of Users:') }}
+            {{ Form::number('userCount') }}
+            {{ Form::submit('Generate Users') }}
         </div>
 
     {{ Form::close() }}

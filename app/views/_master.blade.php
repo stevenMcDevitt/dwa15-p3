@@ -34,7 +34,7 @@
                             <ul class="nav navbar-nav">
                                 <li><a href="http://p1.iitbotftbd.com">P1 - Portfolio</a></li>
                                 <li><a href="http://p2.iitbotftbd.com">P2 - xkcd PwD</a></li>
-                                <li class=active><a href="http://p1.iitbotftbd.com">P3 - TBD</a></li>
+                                <li class=active><a href="http://p3.iitbotftbd.com">P3 - TBD</a></li>
                                 <li><a href="http://p1.iitbotftbd.com">P4 - TBD</a></li>
                             </ul>
                             <form class="navbar-form navbar-right" role="search">
@@ -73,7 +73,7 @@
                     <br>
                     <p class="bottom-sep"></p>
                     <h1>Links to Project</h1>
-                    <p><a href="http://localhost:8888/">Link to Project 3 Site</a></p>
+                    <p><a href="http://p3.iitbotftbd.com">Link to Project 3 Site</a></p>
                     <p><a href="https://github.com/stevenMcDevitt/dwa15-p3.git">Link to Project 3 Github Repository</a></p>
                     <p class="bottom-sep"></p>
                 </div>

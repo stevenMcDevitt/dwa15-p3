@@ -58,8 +58,35 @@ Route::get('/randomuser', function() {
 });
 
 Route::post('/randomuser', function() {
-	
-    return View::make('randomuser-results');
+
+	$userCount = Input::get('userCount');
+	$formdata = Input::all();
+
+	if (isset($userCount)) {
+		if ($userCount < 1 || $userCount > 7) {
+			$userCount = 5;
+		}
+	} else {
+		$userCount = 1;
+	}
+
+//	echo Pre::render($formdata);
+//	echo Pre::render($userCount);
+
+	$fakeUser = Faker\Factory::create();
+
+	for ($i = 0; $i < $userCount ; $i++) {
+		$fakeUserData['name'][] = $fakeUser->name;
+		$fakeUserData['dob'][]  = $fakeUser->dateTimeThisCentury->format('Y-m-d');
+		$fakeUserData['addressStreet'][] = $fakeUser->address;
+		$fakeUserData['addressCity'][] = $fakeUser->city;
+		$fakeUserData['addressState'][] = $fakeUser->state;
+
+	}
+
+//	echo Pre::render($fakeUserData);
+		
+    return View::make('randomuser-results')->with('output', $fakeUserData)->with('userCount',$userCount);
 
 });
 

@@ -24,8 +24,30 @@ Route::get('/loremipsum', function() {
 });
 
 Route::post('/loremipsum', function() {
+
+	$paragraphCount = Input::get('paragraphCount');
+	$formdata = Input::all();
+
+	if (isset($paragraphCount)) {
+		if ($paragraphCount < 1 || $paragraphCount > 7) {
+			$paragraphCount = 5;
+		}
+	} else {
+		$paragraphCount = 1;
+	}
+
+//	echo Pre::render($formdata);
+//	echo Pre::render($paragraphCount);
+
+	$loremIpsumObject = new Badcow\LoremIpsum\Generator();
+
+	$generatedLoremIpsum = $loremIpsumObject->getParagraphs($paragraphCount);
+
+//	echo Pre::render($generatedLoremIpsum);
+
+	$loremIpsumOutput = implode('<p>',$generatedLoremIpsum);
 	
-    return View::make('loremipsum-results');
+    return View::make('loremipsum-results')->with('output',$loremIpsumOutput);
 
 });
 

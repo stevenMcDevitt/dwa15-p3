@@ -8,4 +8,6 @@
 
 	{{ $output }}
 
+	{{ Input::all() }}
+
 @stop

@@ -36,8 +36,8 @@ Route::post('/loremipsum', function() {
 		$paragraphCount = 1;
 	}
 
-//	echo Pre::render($formdata);
-//	echo Pre::render($paragraphCount);
+// echo Pre::render($formdata);
+// echo Pre::render($paragraphCount);
 
 	$loremIpsumObject = new Badcow\LoremIpsum\Generator();
 
@@ -48,6 +48,7 @@ Route::post('/loremipsum', function() {
 	$loremIpsumOutput = implode('<p>',$generatedLoremIpsum);
 	
     return View::make('loremipsum-results')->with('output',$loremIpsumOutput);
+//    return View::make('loremipsum-results')->with('output',$formdata);
 
 });
 
@@ -70,8 +71,8 @@ Route::post('/randomuser', function() {
 		$userCount = 1;
 	}
 
-//	echo Pre::render($formdata);
-//	echo Pre::render($userCount);
+//  echo Pre::render($formdata);
+//  echo Pre::render($userCount);
 
 	$fakeUser = Faker\Factory::create();
 
